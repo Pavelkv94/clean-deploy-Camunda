@@ -20,6 +20,8 @@ setInterval(() => {
     .then((response) => {
       return response.json();
     })
+
+    // !FOR DELETE YOUR DEPLOYMENT(WITH DEPLOYMENT NAME)
     .then((data) => {
         console.log(data.filter((deploy) => deploy.name === deploymentName))
         return data.filter((deploy) => deploy.name === deploymentName).map((e) => e.id);
